@@ -4,13 +4,18 @@ import { RouterModule, Routes } from "@angular/router";
 import { LogincompComponent } from './logincomp/logincomp.component';
 import { RegistercompComponent } from './registercomp/registercomp.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { CrudeComponent } from './crude/crude.component';
+import { BodyComponent } from './body/body.component';
+import { IndexComponent } from './index/index.component';
 
 
 const routes: Routes = [
-  { path: 'login', component: LogincompComponent },
+  { path: '', component: LogincompComponent },
   { path: 'signup', component: RegistercompComponent },
-  { path:'navbar',component:NavbarComponent }
+  { path:'navbar',component:NavbarComponent },
+  {path : 'crude',component:CrudeComponent},
+  { path:'body',component:BodyComponent},
+  { path :'library.index' ,component:IndexComponent}
 ];
 @NgModule({
 
@@ -18,4 +23,5 @@ const routes: Routes = [
    exports: [RouterModule],
 })
 export class AppRoutingModule { }
-export const routingComponent=[LogincompComponent,RegistercompComponent,NavbarComponent]
+export const routingComponent=[LogincompComponent,RegistercompComponent,
+  NavbarComponent,CrudeComponent,BodyComponent]
